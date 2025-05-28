@@ -1,0 +1,4 @@
+#!/bin/bash
+
+as -arch arm64 -o json.o json.s
+ld -o main json.o -lSystem -syslibroot $(xcrun --show-sdk-path)
